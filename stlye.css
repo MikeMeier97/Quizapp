@@ -2,3 +2,13 @@ body{
     min-height: 100vh;
     background-color:rgba(0, 51, 219, 0.822) !important;
 }
+.cardMiddle{
+    min-height: 75vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardColor {
+    background-color: rgb(241, 241, 241);
+}
