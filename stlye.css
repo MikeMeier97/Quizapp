@@ -12,3 +12,6 @@ body{
 .cardColor {
     background-color: rgb(241, 241, 241);
 }
+.pointer:hover {
+    cursor: pointer;
+}
