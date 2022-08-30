@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stlye.css">
+    <script src="./script.js"></script>
     <title>QuizApp</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
       </nav>
       <div class="cardMiddle mt-5">
       <div class="card" style="width: 30%;">
-        <img src="./img/question.jpg" class="card-img-top" alt="...">
+        <img src="./img/question.jpg" class="card-img-top" alt="Question">
         <div class="card-body cardColor">
           <h3 class="mb-3">Wie alt bin ich?</h3> 
           <div class="card pointer" style="margin-bottom: 10px;" onclick="answer(false)">
@@ -36,11 +37,16 @@
               23
             </div>
           </div>
-          <div class="card pointer" onclick="answer(true)">
+          <div class="card pointer" id="trueAnswer" onclick="answer(true)">
             <div class="card-body">
               25
             </div>
           </div>
+          <footer class="pt-3 mb-0 pb-0 d-flex justify-content-between">
+            <p class="mb-0 pb-0 pt-1"><b>1</b> von <b>5</b></p>
+            <button type="button" class="btn btn-primary ">Primary</button>
+
+          </footer>
         </div>
       </div>
     </div>
