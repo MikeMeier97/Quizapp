@@ -2,8 +2,10 @@ let points = 0;
 let pages = 1; 
 
 function onload() {
+    loadFirstQuestions();
     loadPointBase();
     loadPages();
+    
 }
 
 function answer(i) {
@@ -32,3 +34,4 @@ function loadPages() {
     pagesPoint.innerHTML = ``;
     pagesPoint.innerHTML = `<b>${pages}</b> von <b>5</b>`
 }
+
