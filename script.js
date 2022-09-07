@@ -58,8 +58,15 @@ function showQuestion() {
 function init() {
 }
 
-function answer(i) {
-    
+function answer(selection) {
+    let question = questions[currentQuestion];
+    let answerNumber = selection.slice(-1);
+
+    if(answerNumber == question['right_answer']) {
+        alert('RICHTIG'); 
+    } else {
+        alert('FALSCH');
+    }
 }
 
 function loadPointBase(){
