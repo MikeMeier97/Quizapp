@@ -35,15 +35,19 @@ let questions = [
     "right_answer": 3
 }
 ];
-let points = 0; 
-let pages = 1; 
+let points = 0;  
+let currentQuestion = 0;
 
 function onload() {
     init();
-    loadFirstQuestions();
+    loadCurrentQuestion();
     loadPointBase();
     loadPages();
     
+}
+
+function loadCurrentQuestion() {
+    let question = questions[currentQuestion];
 }
 
 function init() {
@@ -55,16 +59,12 @@ function answer(i) {
 }
 
 function loadPointBase(){
-    let pointBase = document.getElementById('pointBase');
-    pointBase.innerHTML = ``;
-    pointBase.innerHTML += `${points} von 25 Punkte`
+    document.getElementById('pointBase').innerHTML = `${points} von 25 Punkte`
 }
 
 
 function loadPages() {
-    let pagesCurrently = document.getElementById('pagesCurrently');
-    let pagesAll = document.getElementById('pagesAll');
-    pagesCurrently.innerHTML = `${pages}`;
-    pagesAll.innerHTML = `${questions.length}`;
+    document.getElementById('pagesCurrently').innerHTML = `${currentQuestion + 1}`;
+    document.getElementById('pagesAll').innerHTML = `${questions.length}`;
 }
 
