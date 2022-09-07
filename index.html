@@ -22,7 +22,32 @@
         <div class="card" style="width: 30%;">
           <img src="./img/question.jpg" class="card-img-top" alt="Question">
             <div class="card-body cardColor" id="questionContent">
-              
+              <h3 class="mb-3" id="questionTitle">Wie alt bin ich?</h3> 
+              <div class="card pointer" id="question4" style="margin-bottom: 10px;" onclick="answer(0)">
+                <div class="card-body">
+                  16
+                </div>
+              </div>
+              <div class="card pointer" id="question4" style="margin-bottom: 10px;" onclick="answer(1)">
+                <div class="card-body">
+                  19
+                </div>
+              </div>
+              <div class="card pointer" id="question4" style="margin-bottom: 10px;" onclick="answer(2)">
+                <div class="card-body">
+                  23
+                </div>
+              </div>
+              <div class="card pointer" id="question4" onclick="answer(25)">
+                <div class="card-body">
+                  25
+                </div>
+              </div> 
+              <footer class="pt-3 mb-0 pb-0 d-flex justify-content-between">
+                  <p class="mb-0 pb-0 pt-1"><b id="pagesCurrently"></b> von <b id="pagesAll"></b></p>
+                  <p class="mb-0 pb-0 pt-1"><b id="pointBase"></b></p>
+                  <button type="button" class="btn btn-primary mb-0 pt-1">Weiter</button>
+              </footer>
             </div>
         </div>
       </div>
