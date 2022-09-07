@@ -37,6 +37,7 @@ let questions = [
 ];
 let points = 0;  
 let currentQuestion = 0;
+let localQuestionBlock = 0;
 
 function onload() {
     init();
@@ -57,15 +58,23 @@ function showQuestion() {
 
 function init() {
 }
-
+// arbeit ende. Versuch auf Array teil zuzugreifen.
 function answer(selection) {
     let question = questions[currentQuestion];
     let answerNumber = selection.slice(-1);
-
-    if(answerNumber == question['right_answer']) {
-        alert('RICHTIG'); 
-    } else {
-        alert('FALSCH');
+    if(localQuestionBlock < 1) {
+        if(answerNumber == question['right_answer']) {
+            document.getElementById(selection).classList.add('bg-success');
+            localQuestionBlock++;
+            addPoints();
+        } else {
+            let showRightAnswer = questions[currentQuestion].right_answer;
+            showRightAnswer = questions[currentQuestion];
+            console.log(showRightAnswer);
+            document.getElementById(selection).classList.add('bg-danger');
+            document.getElementById(questions).classList.add('bg-success');
+            localQuestionBlock++;
+        }
     }
 }
 
@@ -79,3 +88,9 @@ function loadPages() {
     document.getElementById('pagesAll').innerHTML = `${questions.length}`;
 }
 
+function addPoints () {
+    if(points <= 20) {
+        points = points + 5;
+        loadPointBase();
+    }
+}
