@@ -50,6 +50,10 @@ function onload() {
 //function save() {
 //    localStorage.setItem();
 //}
+/* function load() {
+    localStorage.getItem();
+}
+*/
 
 function showQuestion() {
     let question = questions[currentQuestion];
