@@ -41,19 +41,11 @@ let localQuestionBlock = 0;
 
 function onload() {
     init();
-    //save();
     showQuestion();
     loadPointBase();
     loadPages();
     
 }
-//function save() {
-//    localStorage.setItem();
-//}
-/* function load() {
-    localStorage.getItem();
-}
-*/
 
 function showQuestion() {
     let question = questions[currentQuestion];
@@ -66,7 +58,6 @@ function showQuestion() {
 
 function init() {
 }
-// arbeit ende. Versuch auf Array teil zuzugreifen.
 function answer(selection) {
     let question = questions[currentQuestion];
     let theRightAnswer = 'answer' + question['right_answer'];
