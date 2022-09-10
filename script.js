@@ -79,17 +79,12 @@ function answer(selection) {
         } else {
             document.getElementById(theRightAnswer).parentNode.classList.add('bg-success');
             document.getElementById(selection).parentNode.classList.add('bg-danger');
-            reload();
             localQuestionBlock++;   
         }
+        document.getElementById('nextButton').disabled = false; 
     }
 }
 
-function reload(){
-    setTimeout(function () {
-        location.reload()
-    }, 1000);
-}
 
 function loadPointBase(){
     document.getElementById('pointBase').innerHTML = `${points} von 25 Punkte`
