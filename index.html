@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./responsiv.css" type="text/css">
     <link rel="stylesheet" href="./stlye.css">
     <script src="./script.js"></script>
     <script src="./templates.js"></script>
     <title>QuizApp</title>
 </head>
 <body onload="onload()">
-    <nav class="navbar bg-dark">
+    <nav class="navbar bg-dark p-0">
         <div class="container-fluid d-flex justify-content-center">
           <a class="navbar-brand" href="#">
             <h1 class="text-white">QuizApp</h1>
@@ -21,8 +22,17 @@
       <div class="cardMiddle mt-5">
         <div class="card" style="width: 30%;">
           <img src="./img/question.jpg" class="card-img-top" alt="Question">
+            
+            <div class="card-body endScreen" id="endScreen" style="display: none;">
+              <p class="mb-4">Quiz beendet!</p>
+              <img class="pokalImg mb-4" src="./img/pokal.png" alt="Pokal">
+              <p>Du hast <b id="pointsEndscreen"></b> von <b>25</b> Punkten erreicht!</p>
+            </div>
+
             <div class="card-body cardColor" id="questionContent">
+
               <h3 class="mb-3" id="questionTitle">Titel</h3> 
+
               <div class="card pointer quiz-card"  style="margin-bottom: 10px;" onclick="answer('answer1')">
                 <div class="card-body" id="answer1">
                   Antwort

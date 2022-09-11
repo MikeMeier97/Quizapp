@@ -19,3 +19,21 @@ body{
 .quiz-card:hover {
     background-color: rgb(246, 247, 255);
 }
+
+.pokalImg {
+    width: 40%;
+    object-fit:cover;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+.endScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+}
+.navbar h1{
+    font-size: 36px !important;
+}
+
