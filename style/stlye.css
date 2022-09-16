@@ -40,3 +40,7 @@ body{
 .counter {
     font-size: 10px;
 }
+
+.cardContext{
+    width: 80%;
+}
